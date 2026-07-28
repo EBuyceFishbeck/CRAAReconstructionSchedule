@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+
+</body>
+</html> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Grid Gantt Chart</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            padding: 20px;
+            border: none;
+        }
+        .gantt-container {
+            display: grid;
+            grid-template-columns: 150px repeat(13, 1fr); /* 150px for task names, 13 columns for months */
+            grid-gap: 8px 0;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow-x: auto;
+        }
+        /* Headers */
+        .gantt-header {
+            font-weight: bold;
+            text-align: center;
+            padding: 10px 0;
+            background: #eaeaea;
+            border-bottom: 2px solid #ccc;
+        }
+        .task-name-header {
+            grid-column: 1;
+            text-align: left;
+            padding-left: 10px;
+        }
+        /* Rows */
+        .task-label {
+            grid-column: 1;
+            font-size: 0.9em;
+            font-weight: regular;
+            display: flex;
+            align-items: center;
+            background: #f9f9f9;
+            padding-left: 10px;
+            border-right: 1px solid #ddd;
+        }
+        .button {
+            height: 35px;
+            border: none;
+            display: flex;
+            align-items: center;
+            padding-left: 10px;
+            color: white;
+            text-decoration: none;
+            font-size: 0.7em;
+            font-weight: bold;
+            width: 100%;
+        }        
+        /* Custom tracks & positioning (Start Column / End Column) */
+        /* Note: Column 1 is labels. */
+        .task-1 { grid-column: 2 / 4; background-color: #46648E; } /* Jun to Aug */
+        .task-2 { grid-column: 4 / 6; background-color: #46648E; } /* Aug to Oct */
+        .task-3 { grid-column: 6 / 7; background-color: #46648E; } /* Oct to Dec */
+        .task-4 { grid-column: 4 / 5; background-color: #F36F31; } /* Aug to Sep */
+        .task-5 { grid-column: 5 / 7; background-color: #F36F31; } /* Sep to Nov */
+        .task-6 { grid-column: 12 / 15; background-color: #F36F31; } /* Apr to Jul */
+        .task-7 { grid-column: 13 / 15; background-color: #F36F31; } /* May to Jul */
+        .task-8 { grid-column: 7 / 12; background-color: #A3AFC1; } /* Nov to Apr */
+    </style>
+</head>
+<body>
+
+    <h2 id="demo"></h2>
+
+    <div class="gantt-container">
+        <!-- Timeline Headers -->
+        <div class="gantt-header task-name-header">Tasks</div>
+        <div class="gantt-header">Jun</div>
+        <div class="gantt-header">Jul</div>
+        <div class="gantt-header">Aug</div>
+        <div class="gantt-header">Sep</div>
+        <div class="gantt-header">Oct</div>
+        <div class="gantt-header">Nov</div>
+        <div class="gantt-header">Dec</div>
+        <div class="gantt-header">Jan</div>
+        <div class="gantt-header">Feb</div>
+        <div class="gantt-header">Mar</div>
+        <div class="gantt-header">Apr</div>
+        <div class="gantt-header">May</div>
+        <div class="gantt-header">Jun</div>
+
+
+        <!-- Row 1 -->
+        <div class="task-label">Port Lansing Rd - Segment 1</div>
+        <button class="button task-1" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 1 June 2026 - July 2027 <br>
+Reconstruction of Port Lansing Rd between Airport Rd and Capital City Blvd.
+<br>
+Detour: <br>
+EB N Grand River Ave to Capital City Blvd
+<br>
+SB Capital City Blvd to N Grand River Ave`">
+6/8 - 7/1</button>
+
+        <!-- Row 2 -->
+        <div class="task-label">Port Lansing Rd - Segment 2</div>
+        <button class="button task-2" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 2 August 2026 - September 2026 <br>
+Reconstruction of Port Lansing Rd between Capital City Blvd and west of the eastern UPS driveway.
+<br>
+Detour: <br>
+EB N Grand River Ave to Capital City Blvd
+<br>
+SB Capital City Blvd to N Grand River Ave`">
+8/6 - 9/25</button>
+
+        <!-- Row 3 -->
+        <div class="task-label">Port Lansing Rd - Segment 3</div>
+        <button class="button task-3" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 3 September 2026 - November 2026 <br>
+Reconstruction of Port Lansing Rd and shoulder construction on Port Lansing Rd between west of the eastern UPS driveway and Dewitt Rd.
+<br>
+Detour: <br>
+EB N Grand River Ave to Capital City Blvd
+<br>
+SB Capital City Blvd to N Grand River Ave`">
+9/26 - 11/14</button>
+
+        <!-- Row 4 -->
+        <div class="task-label">Capital City Blvd - Stage 1</div>
+        <button class="button task-4" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 4 August 2026 - September 2026 <br>
+Reconstruction of Capital City Blvd north of Port Lansing Rd.
+<br>
+Detour: <br>
+EB N Grand River Ave to Capital City Blvd
+<br>
+SB Capital City Blvd to N Grand River Ave`">
+8/7 - 9/10</button>
+        
+        <!-- Row 5 -->
+        <div class="task-label">Capital City Blvd - Stage 2</div>
+        <button class="button task-5" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 5 September 2026 - June 2027 <br>
+Reconstruction of Capital City Blvd south of Port Lansing Rd.
+<br>
+Detour: <br>
+EB N Grand River Ave to Capital City Blvd
+<br>
+SB Capital City Blvd to N Grand River Ave`">
+9/11 - 11/14</button>
+        
+        <!-- Row 6 -->
+        <div class="task-label">Capital City Blvd - Stage 3</div>
+        <button class="button task-6" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 5 September 2026 - June 2027 <br>
+Reconstruction of Capital City Blvd south of Port Lansing Rd.
+<br>
+Detour: <br>
+EB N Grand River Ave to Capital City Blvd
+<br>
+SB Capital City Blvd to N Grand River Ave`">
+4/1 - 6/23</button>
+        
+        <!-- Row 7 -->
+        <div class="task-label">Capital City Blvd - Stage 3 RR Crossings</div>
+        <button class="button task-7" type="button" onclick="document.getElementById('demo').innerHTML = `Northernmost Segment 5 May 2027 - June 2027 <br>
+Reconstruction of Capital City Blvd south of Port Lansing Rd.
+<br>
+Detour: <br>
+EB N Grand River Ave to Capital City Blvd
+<br>
+SB Capital City Blvd to N Grand River Ave`">
+5/1 - 6/23</button>
+        
+        <!-- Row 8 -->
+        <div class="task-label">Winter Shutdown</div>
+        <button class="button task-8" type="button" onclick="document.getElementById('demo').innerHTML = `Winter Shutdown November 2026 - March 2027 <br>
+Detour: <br>
+EB N Grand River Ave to Capital City Blvd
+<br>
+SB Capital City Blvd to N Grand River Ave`">
+Winter Shutdown</button>
+    </div>
+
+</body>
+</html>
