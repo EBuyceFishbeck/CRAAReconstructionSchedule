@@ -72,10 +72,9 @@
         .task-2 { grid-column: 5 / 6; background-color: #46648E; } /* Aug to Oct */
         .task-3 { grid-column: 5 / 7; background-color: #46648E; } /* Oct to Dec */
         .task-4 { grid-column: 5 / 6; background-color: #F36F31; } /* Sep to Nov */
-        .task-5 { grid-column: 5 / 7; background-color: #F36F31; } /* Sep to Nov */
-        .task-6 { grid-column: 12 / 15; background-color: #F36F31; } /* Apr to Jul */
-        .task-7 { grid-column: 13 / 15; background-color: #F36F31; } /* May to Jul */
-        .task-8 { grid-column: 7 / 12; background-color: #A3AFC1; } /* Nov to Apr */
+        .task-5_1 { grid-column: 5 / 7; background-color: #F36F31; } /* Sep to Nov */
+        .task-5_2 { grid-column: 12 / 15; background-color: #F36F31; } /* Sep to Nov */
+        .task-6 { grid-column: 7 / 12; background-color: #A3AFC1; } /* Nov to Apr */
     </style>
 </head>
 <body>
@@ -101,7 +100,7 @@
 
 
         <!-- Row 1 -->
-        <div class="task-label">Port Lansing Rd - Segment 1</div>
+        <div class="task-label">Segment 1</div>
         <button class="button task-1" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 1 July 2026 - August 2027 <br>
 Reconstruction of Port Lansing Rd between Airport Rd and Capital City Blvd.
 <br>
@@ -112,7 +111,7 @@ SB Capital City Blvd to N Grand River Ave`">
 7/1 - 8/24</button>
 
         <!-- Row 2 -->
-        <div class="task-label">Port Lansing Rd - Segment 2</div>
+        <div class="task-label">Segment 2</div>
         <button class="button task-2" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 2 August 2026 - September 2026 <br>
 Reconstruction of Port Lansing Rd between Capital City Blvd and west of the eastern UPS driveway.
 <br>
@@ -123,8 +122,8 @@ Access to all businesses will be maintained.`">
 8/31 - 9/25</button>
 
         <!-- Row 3 -->
-        <div class="task-label">Port Lansing Rd - Segment 3</div>
-        <button class="button task-3" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 3 September 2026 - November 2026 <br>
+        <div class="task-label">Segment 3</div>
+        <button class="button task-3" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 3 August 2026 - November 2026 <br>
 Reconstruction of Port Lansing Rd and shoulder construction on Port Lansing Rd between west of the eastern UPS driveway and Dewitt Rd.
 <br>
 Detour: <br>
@@ -134,9 +133,9 @@ Access to all businesses will be maintained.`">
 8/31 - 11/14</button>
 
         <!-- Row 4 -->
-        <div class="task-label">Capital City Blvd - Stage 1</div>
-        <button class="button task-4" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 4 September 2026 - October 2026 <br>
-Reconstruction of Capital City Blvd north of Port Lansing Rd.
+        <div class="task-label">Segment 4</div>
+        <button class="button task-4" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 4 August 2026 - September 2026 <br>
+Reconstruction of Capital City Blvd between Port Lansing Rd and Commerce Rd and reconstruction of crossovers between Port Lansing Rd and Commerce Rd.
 <br>
 Detour: <br>
 Maintain one lane of traffic in each direction on the east side of Capital City Blvd. 
@@ -145,37 +144,23 @@ All business access will be maintained.`">
 8/24 - 9/23</button>
         
         <!-- Row 5 -->
-        <div class="task-label">Capital City Blvd - Stage 2</div>
-        <button class="button task-5" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 5 August 2026 - September 2027 <br>
+        <div class="task-label">Segment 5</div>
+        <button class="button task-5_1" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 5 September 2026 - June 2027 <br>
 Reconstruction of Capital City Blvd south of Port Lansing Rd.
 <br>
 Detour: <br>
-Maintain one lane of traffic in each direction on the east side of Capital City Blvd. 
+Information coming soon.`">
+9/11/26 - 6/23/27</button>
+        <button class="button task-5_2" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 5 September 2026 - June 2027 <br>
+Reconstruction of Capital City Blvd south of Port Lansing Rd.
 <br>
-All business access will be maintained.`">
-9/11 - 11/14</button>
+Detour: <br>
+Information coming soon.`">
+9/11/26 - 6/23/27</button>
         
         <!-- Row 6 -->
-        <div class="task-label">Capital City Blvd - Stage 3</div>
-        <button class="button task-6" type="button" onclick="document.getElementById('demo').innerHTML = `Segment 5 April 2027 - July 2027 <br>
-Reconstruction of Capital City Blvd south of Port Lansing Rd.
-<br>
-Detour: <br>
-Information coming soon.`">
-4/15 - 6/23</button>
-        
-        <!-- Row 7 -->
-        <div class="task-label">Capital City Blvd - Stage 3 RR Crossings</div>
-        <button class="button task-7" type="button" onclick="document.getElementById('demo').innerHTML = `Northernmost Segment 5 April 2027 - June 2027 <br>
-Reconstruction of Capital City Blvd south of Port Lansing Rd.
-<br>
-Detour: <br>
-Information coming soon.`">
-4/26 - 6/29</button>
-        
-        <!-- Row 8 -->
         <div class="task-label">Winter Shutdown</div>
-        <button class="button task-8" type="button" onclick="document.getElementById('demo').innerHTML = `Winter Shutdown November 2026 - April 2027`">
+        <button class="button task-6" type="button" onclick="document.getElementById('demo').innerHTML = `Winter Shutdown November 2026 - April 2027`">
 11/14 - 4/15</button>
     </div>
 
